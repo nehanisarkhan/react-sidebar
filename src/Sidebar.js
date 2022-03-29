@@ -14,23 +14,25 @@ function Sidebar() {
     setCopied(true);
   }
   return (
-    <div className="Sidebar">
-      <ul className="sidebarList">
-        {data.map((item, key) => {
-          return (
-            <li
-              key={key}
-              className="row"
-              id={window.location.pathname == item.link ? 'active' : ''}
-              onClick={() => (window.location.pathname = item.link)}
-            >
-              {item.name}
-            </li>
-          );
-        })}
-      </ul>
+    <>
+      <div className="Sidebar">
+        <ul className="sidebarList">
+          {data.map((item, key) => {
+            return (
+              <li
+                key={key}
+                className="row"
+                id={window.location.pathname == item.link ? 'active' : ''}
+                onClick={() => (window.location.pathname = item.link)}
+              >
+                {item.name}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
       <button onClick={copy}>{!copied ? 'Copy link' : 'Copied!'}</button>
-    </div>
+    </>
   );
 }
 
