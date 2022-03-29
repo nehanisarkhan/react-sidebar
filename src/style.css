@@ -43,8 +43,7 @@ body {
 }
 .sidebarList .row:hover {
   cursor: pointer;
-  background-color: lightgray;
-  border-left: 2px solid red;
+  color: #13558e;
 }
 #active {
   background-color: darkolivegreen;
